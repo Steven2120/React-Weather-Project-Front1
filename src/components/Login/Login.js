@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { isEmpty } from "validator";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import Axios from "../utils/Axios";
 import jwtDecode from "jwt-decode";
 import checkIfUserIsAuth from "../utils/checkIfUserIsAuth";
@@ -111,14 +111,15 @@ export class Login extends Component {
 
       window.localStorage.setItem("jwtToken", jwtToken);
 
-      toast.success("Login success!!");
+      // toast.success("Login success!!");
       this.props.history.push("/weather");
     } catch (e) {
-      if (e.response.status === 429) {
-        toast.error(e.response.data);
-      } else {
-        toast.error(e.response.data.payload);
-      }
+      console.log(e);
+      // if (e.response.status === 429) {
+      //   toast.error(e.response.data);
+      // } else {
+      //   toast.error(e.response.data.payload);
+      // }
     }
   };
 

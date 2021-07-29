@@ -4,7 +4,7 @@ import "./WeatherInput.css";
 const WeatherInput = (props) => {
   return (
     <div className="container">
-      <div>{props.error ? error() : noError()}</div>
+      <div>{props.error ? error() : null}</div>
       <form onSubmit={props.loadWeather}>
         <div className="row">
           <div className="col-md-3 offset-md-2">
@@ -40,10 +40,6 @@ function error() {
       Please Enter City and Country
     </div>
   );
-}
-
-function noError() {
-  return <div>Country</div>;
 }
 
 export default WeatherInput;

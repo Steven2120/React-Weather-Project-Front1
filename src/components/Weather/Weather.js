@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import WeatherInput from "../ShowWeather/WeatherInput";
 import ShowWeather from "../ShowWeather/ShowWeather";
 const API_KEY = process.env.REACT_APP_WEATHER_API;
@@ -99,7 +99,8 @@ export class Weather extends Component {
         });
       }
     } catch (e) {
-      toast.error(e.response.data);
+      //   toast.error(e.response.data);
+      console.log(e);
     }
   };
 
