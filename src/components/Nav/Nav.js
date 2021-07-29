@@ -9,7 +9,9 @@ export class Nav extends Component {
       <nav className="Navbar">
         <div className="h1-logo">
           <h1>
-            <Link to="/">Weather App</Link>
+            <Link className="selected1" to="/">
+              Weather App
+            </Link>
           </h1>
         </div>
 
@@ -26,11 +28,19 @@ export class Nav extends Component {
             </li>
             <li>
               {this.props.user ? (
-                <NavLink activeClassName="selected" to="/profile">
+                <NavLink
+                  className="selected1"
+                  activeClassName="selected"
+                  to="/profile"
+                >
                   Profile - {this.props.user.email}
                 </NavLink>
               ) : (
-                <NavLink activeClassName="selected" to="/sign-up">
+                <NavLink
+                  className="selected1"
+                  activeClassName="selected"
+                  to="/sign-up"
+                >
                   Sign up
                 </NavLink>
               )}
@@ -38,7 +48,8 @@ export class Nav extends Component {
             <li>
               {this.props.user ? (
                 <NavLink
-                  activeStyle={{ borderBottom: "1px solid white" }}
+                  className="selected1"
+                  activeClassName="selected"
                   to="/"
                   onClick={this.props.handleUserLogout}
                 >
@@ -46,7 +57,8 @@ export class Nav extends Component {
                 </NavLink>
               ) : (
                 <NavLink
-                  activeStyle={{ borderBottom: "1px solid white" }}
+                  className="selected1"
+                  activeClassName="selected"
                   to="/login"
                 >
                   Login

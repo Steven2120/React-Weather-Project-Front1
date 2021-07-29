@@ -4,6 +4,9 @@ import Signup from "./components/Signup/SignUp";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
 import Nav from "./components/Nav/Nav";
+import Weather from "./components/Weather/Weather";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "weather-icons/css/weather-icons.css";
 
 const MainRouter = (props) => {
   return (
@@ -18,6 +21,7 @@ const MainRouter = (props) => {
             <Login {...routerProps} handleUserLogin={props.handleUserLogin} />
           )}
         />
+        <Route exact path="/weather" component={Weather} />
         <Route exact path="/" component={Home} />
       </>
     </Router>

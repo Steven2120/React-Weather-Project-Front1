@@ -3,7 +3,7 @@ import "./Home.css";
 
 export class Home extends Component {
   render() {
-    return <div>Weather App</div>;
+    return <div className="home">Weather App</div>;
   }
 }
 

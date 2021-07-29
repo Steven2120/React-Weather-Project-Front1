@@ -255,7 +255,9 @@ export class SignUp extends Component {
 
     return (
       <div className="container">
-        <div className="form-text">Sign Up</div>
+        <div className="form-text">
+          <h1 id="titles">Sign Up</h1>
+        </div>
         <div className="form-div">
           <form className="form" onSubmit={this.handleOnSubmit}>
             <div className="form-group-inline">
